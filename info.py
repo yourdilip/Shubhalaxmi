@@ -68,7 +68,7 @@ OWNER_USERNAME = environ.get('OWNER_USERNAME', 'ABa2zm') # owner username withou
 # Links
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/A2Zallmovierequest')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/A2Zmoviesa')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/+-vq2FPmdjUg1ZjBl')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/A2Z_how_to_verify')
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'atozmoviesrequest') # Support Chat Link Without https:// or @
 
 # True Or False
