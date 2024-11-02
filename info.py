@@ -20,7 +20,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'TechVJBot')
 API_ID = int(environ.get('API_ID', '21065089'))
 API_HASH = environ.get('API_HASH', '63c7a41e907fa28e88a620eb0338ddbe')
-BOT_TOKEN = environ.get('BOT_TOKEN', "8074773761:AAGLCvdXrAPudRFdUtS9g8MqZpHIbHtNDDI")
+BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
@@ -67,8 +67,8 @@ OWNER_USERNAME = environ.get('OWNER_USERNAME', 'll_Alexa_ll') # owner username w
 
 # Clone Information : If Clone Mode Is True Then Bot Clone Other Bots.
 CLONE_MODE = bool(environ.get('CLONE_MODE', True)) # Set True or False
-CLONE_DATABASE_URI = environ.get('CLONE_DATABASE_URI', "") # Necessary If clone mode is true
-PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', '') # Public Channel Username Without @ or without https://t.me/ and Bot Is Admin With Full Right.
+CLONE_DATABASE_URI = environ.get('CLONE_DATABASE_URI', "mongodb+srv://alexa_891:alexa_891@alexa-testing89.81zdz.mongodb.net/?retryWrites=true&w=majority&appName=ALEXA-TESTING89") # Necessary If clone mode is true
+PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', 'SAKSHI_SUPPORT') # Public Channel Username Without @ or without https://t.me/ and Bot Is Admin With Full Right.
 
 # Links
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/SAKSHI_SUPPORT')
@@ -143,7 +143,7 @@ if 'DYNO' in environ:
     ON_HEROKU = True
 else:
     ON_HEROKU = False
-URL = environ.get("URL", "https://testofvjfilter-1fa60b1b8498.herokuapp.com/")
+URL = environ.get("URL", "")
 
 
 # Rename Info : If True Then Bot Rename File Else Not
