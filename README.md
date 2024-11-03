@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://graph.org/file/d57d6f83abb6b8d0efb02.jpg" alt="VJ-Filter-Bot Logo">
+  <img src="https://envs.sh/_M3.jpg" alt="Alexa-Filter-Bot Logo">
 </p>
 <h1 align="center">
-  VJ FILTER BOT
+  ALEXA FILTER BOT
 </h1>
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+VJ+Filter+Bot!)
@@ -120,7 +120,7 @@ Join My <a href='https://telegram.dog/vj_botz'>Update Channel</a> For More Updat
 ### Optional Variables
 * <b>`PICS`: Telegraph links of images to show in start message.( Multiple images can be used separated by space )
 * `FILE_STORE_CHANNEL`: Channel from were file store links of posts should be made.Separate multiple IDs by space
-* Check [info.py](https://github.com/VJBots/VJ-Filter-Bot/blob/Tech_VJ/info.py) for more optional variables.</b>
+* Check [info.py](https://github.com/SK-KING/SK-FILTER-BOT) for more optional variables.</b>
 
 
 <details><summary><b>Deploy To Heroku</b></summary>
@@ -190,16 +190,16 @@ Edit info.py with variables as given below then run bot
 
 
 ## Thanks to 
- - <b>Thanks To [Pyrogram Library](https://github.com/pyrogram/pyrogram) & [Pyrofork Library](https://github.com/Mayuri-Chan/pyrofork)
- - Thanks To [Tech VJ](https://youtube.com/@Tech_VJ) To Modify And Add Amazing Feature In The Repo
- - Thanks To [Eva Marie](https://t.me/TeamEvamaria) For Base Repo
+ - <b>Thanks To [Pyrogram Library](https://github.com/pyrogram/pyrogram) & [Pyrofork Library](https://github.com/SK-KING/SK-FILTER-BOT)
+ - Thanks To [OWNER😎](https://t.me/ll_Alexa_ll) To Modify And Add Amazing Feature In The Repo
+ - Thanks To [TEAM SAKSHI🥀](https://t.me/SAKSHI_UPDATES) For Base Repo
  - Thanks To All Everyone In This Journey</b>
 
 ## Note 🏷️
  
-* [![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://telegram.me/KingVJ01)
+* [![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://telegram.me/ll_Alexa_ll)
 
-<b>[Note To A So Called Dev](https://telegram.dog/vj_botz): 
+<b>[Note To A So Called Sakshi](https://t.me/SAKSHI_UPDATES): 
 
 Fork The Repo And Edit As Per Your Needs.</b>
 
