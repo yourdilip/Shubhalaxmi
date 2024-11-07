@@ -1,5 +1,4 @@
-pyrofork==2.2.11
-pyrogram==2.0.106
+pyrofork==2.3.45 
 tgcrypto  
 requests  
 bs4  
@@ -25,13 +24,13 @@ hachoir
 python-decouple  
 ffmpeg 
 youtube_search 
-pymongo[srv]
-motor
-marshmallow
-umongo
-PyLeaves
-youtube-search-python
-opencv-python-headless
+pymongo[srv]==3.12.3  
+motor==2.5.1  
+marshmallow==3.14.1  
+umongo==3.0.1  
+PyLeaves==1.0.2 
+youtube-search-python==1.4.6 
+opencv-python-headless==4.7.0.68  
 googletrans
 telegraph
 python-dotenv
