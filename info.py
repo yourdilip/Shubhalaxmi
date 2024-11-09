@@ -60,6 +60,7 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://rockerz2ktg:riyazkk2003@cluster0.jzchbww.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+IMDB = False  # Change to False if IMDb results should be disabled
 
 # Premium And Referral Settings
 PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', False))
