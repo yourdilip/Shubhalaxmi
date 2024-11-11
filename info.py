@@ -107,7 +107,7 @@ VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/DeiEppudra/5')
 
 # Shortlink Info
 SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', True))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'publicearn.com')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'https://publicearn.com/api')
 SHORTLINK_API = environ.get('SHORTLINK_API', '998ddd78dda4c6984ae045c0f21bc71ef09672f1')
 
 
