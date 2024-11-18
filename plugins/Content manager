@@ -1,0 +1,124 @@
+from pyrogram import Client, filters
+from pyrogram.errors import
+import asyncio
+import datetime
+import time
+import db
+
+# Database functions
+async def lock_content(content_name):
+    # Database query to lock content
+    await db.update_content_status(content_name, "locked")
+
+async def unlock_content(content_name):
+    # Database query to unlock content
+    await db.update_content_status(content_name, "unlocked")
+
+# Command handlers
+@Client.on_message(filters.command("grant_access"))
+async def grant_access_cmd_handler(client, message):
+    # Admin check
+    user_id = (link unavailable)
+    if user_id not in ADMINS:
+        await message.delete()
+        return
+
+    # Command syntax check
+    if len(message.command) != 4:
+        await message.reply_text("<b>Usage: /grant_access content_name user_id duration \n\nExample /grant_access Movie_Name 1234567 10day</b>")
+        return
+
+    content_name = message.command[1]
+    user_id = int(message.command[2])
+    duration = message.command[3]
+
+    # Duration check
+    seconds = await get_seconds(duration)
+    if seconds <= 0:
+        await message.reply_text("Invalid duration format.")
+        return
+
+    # Expiry time calculation
+    expiry_time = datetime.datetime.now() + datetime.timedelta(seconds=seconds)
+
+    # Update user content access
+    user_data = {"content_name": content_name, "user_id": user_id, "expiry_time": expiry_time}
+    await db.update_user_content_access(user_data)
+
+    # Send success message
+    await message.reply_text("Content access granted to the user.")
+    await client.send_message(chat_id=user_id, text=f"<b>Access granted for {content_name} for {duration} days.</b>")
+
+@Client.on_message(filters.command("revoke_access"))
+async def revoke_access_cmd_handler(client, message):
+    # Admin check
+    user_id = message.from_user.id
+    if user_id not in ADMINS:
+        await message.delete()
+        return
+
+    # Command syntax check
+    if len(message.command) != 3:
+        await message.reply_text("<b>Usage: /revoke_access content_name user_id</b>")
+        return
+
+    content_name = message.command[1]
+    user_id = int(message.command[2])
+
+    # Remove user content access
+    await db.remove_user_content_access(content_name, user_id)
+
+    # Send success message
+    await message.reply_text("Content access revoked from the user.")
+    await client.send_message(chat_id=user_id, text=f"<b>Access revoked for {content_name}.</b>")
+
+@Client.on_message(filters.command("lock_content"))
+async def lock_content_cmd_handler(client, message):
+    # Admin check
+    user_id = message.from_user.id
+    if user_id not in ADMINS:
+        await message.delete()
+        return
+
+    # Command syntax check
+    if len(message.command) != 2:
+        await message.reply_text("<b>Usage: /lock_content content_name</b>")
+        return
+
+    content_name = message.command[1]
+
+    # Lock content
+    await db.lock_content(content_name)
+
+    # Send success message
+    await message.reply_text(f"Content '{content_name}' locked successfully.")
+
+@Client.on_message(filters.command("unlock_content"))
+async def unlock_content_cmd_handler(client, message):
+# Admin check
+user_id = message.from_user.id
+if user_id not in ADMINS:
+await message.delete()
+return
+
+if len(message.command) != 2:
+    await message.reply_text("<b>Usage: /unlock_content content_name</b>")
+    return
+
+content_name = message.command[1]
+
+# Unlock content
+await db.unlock_content(content_name)
+
+# Send success message
+await message.reply_text(f"Content '{content_name}' unlocked successfully.")
+
+# Bot setup
+app = Client("MyBot")
+
+app.add_handler(grant_access_cmd_handler)
+app.add_handler(revoke_access_cmd_handler)
+app.add_handler(lock_content_cmd_handler)
+app.add_handler(unlock_content_cmd_handler)
+
+app.run()
